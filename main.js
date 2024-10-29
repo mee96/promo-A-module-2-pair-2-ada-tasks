@@ -1,3 +1,4 @@
+use strict;
 
 
 
@@ -11,3 +12,9 @@ const tasks = [
     id: 4,
   },
 ];
+
+const list = document.querySelector(".task");
+const listado = () => {
+    list.innerHTML = tasks;
+}
+
