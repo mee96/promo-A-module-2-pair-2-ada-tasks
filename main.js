@@ -1,6 +1,6 @@
-use strict;
+"use strict";
 
-
+console.log("konichiwa sekai");
 
 const tasks = [
   { name: "Recoger setas en el campo", completed: true, id: 1 },
@@ -13,8 +13,12 @@ const tasks = [
   },
 ];
 
-const list = document.querySelector(".task");
-const listado = () => {
-    list.innerHTML = tasks;
-}
+
+const taskList = document.querySelector(".task");
+
+
+taskList.innerHTML = tasks.map(task => {
+  
+  return `<li class="task" >${task.name}</li>`;
+}).join('');
 
